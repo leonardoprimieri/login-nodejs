@@ -1,0 +1,27 @@
+{%include 'layout.njk'%}
+{% block content %}
+  <div class="container home">
+    {% for user in users %}
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-photo" style="background: url(https://source.unsplash.com/collection/8536824/500x500) no-repeat center center / cover"></div>
+        </div>
+        <div class="card-name">
+          <h2>{{user.name}}</h2>
+        </div>
+        <div class="card-email">
+          <p>{{user.email}}</p>
+        </div>
+        <div class="card-socials">
+          <ul>
+            <li><img src="/icons/facebook.svg" alt="facebook"></li>
+            <li><img src="/icons/google-plus.svg" alt="google"></li>
+            <li><img src="/icons/linkedin.svg" alt="linkedin"></li>
+          </ul>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+{% endblock content %}

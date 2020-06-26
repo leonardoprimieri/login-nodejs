@@ -1,0 +1,26 @@
+{% block content %}
+  <nav>
+    <div class="navigation">
+      <a href="/">
+        <li>Home</li>
+      </a>
+
+      <a href="/user/register">
+        <li>Registre-se</li>
+      </a>
+    </div>
+
+    <a href="/user/profile" class="profile">
+      <div class="profile-name">
+        <p>{{user.name}}</p>
+        {% if user %}
+          <a href="/user/logout" class="btn-logout">sair</a>
+        {% else %}
+          <a href="/user/login" class="btn-login">login</a>
+        {% endif %}
+
+      </div>
+    </a>
+
+  </nav>
+{% endblock content %}
